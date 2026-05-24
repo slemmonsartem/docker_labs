@@ -1,4 +1,4 @@
-var builder = WebApplication.CreateBuilder(args);
+п»їvar builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 app.MapGet("/", () =>
@@ -9,10 +9,10 @@ app.MapGet("/", () =>
 
     File.AppendAllText(
         "logs/log.txt",
-        $"Запрос: {currentTime}{Environment.NewLine}"
+        $"Р—Р°РїСЂРѕСЃ: {currentTime}{Environment.NewLine}"
     );
 
-    return $"Текущее время: {currentTime}";
+    return $"РўРµРєСѓС‰РµРµ РІСЂРµРјСЏ: {currentTime}";
 });
 
 app.Run();
