@@ -10,19 +10,22 @@
 docker run -d -p 5000:5000 -e ASPNETCORE_URLS=http://+:5000 web-dotnet
 
 запуск самостоятельного задания
-```docker run -d `
+```
+docker run -d `
   -p 5000:5000 `
   -e ASPNETCORE_URLS=http://+:5000 `
   -v ${PWD}\logs:/app/logs `
   --name myweb `
-  web-dotnet```
+  web-dotnet
+```
 
 **Лаб №2**
 **1. Как в Docker Compose передать строку подключения к БД?**
 
 Через секцию environment в docker-compose.yml:
 
-```services:
+```
+services:
   api:
     environment:
       ConnectionStrings__DefaultConnection: "Host=db;Port=5432;Database=myapidb;Username=postgres;Password=postg
